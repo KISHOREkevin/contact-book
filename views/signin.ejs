@@ -1,0 +1,19 @@
+<%-include("partials/header")%>
+<form class="signin-form" action="/signin" method="post">
+    <h1 class="text-center">SignUp Form</h1>
+    <div class="form-group">
+        <label for="signName">Enter user name :</label>
+        <input type="text" class="form-control" id="signName" name="signName" placeholder="Enter username ...." autocomplete="off"  required>
+    </div>
+    <div class="form-group">
+        <label for="signPassword">Enter the password :</label>
+        <input type="password" class="form-control" id="signPassword" name="signPassword" placeholder="Enter password ...." autocomplete="off" required>
+    </div>
+    <button class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> SignUp</button>
+    <div class="no-account">
+        <p>Already have an account ?</p>
+        <a href="/">login that account</a>
+    </div>
+</form>
+<p class="text-center"><%=errormsg%></p>
+<%-include("partials/footer")%>

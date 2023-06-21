@@ -1,0 +1,13 @@
+<%-include("partials/header")%>
+<form action="/add-contact" class="add-contact-form form-control" method="post">
+    <div class="form-group">
+        <label for="contactName">Enter the contact name : </label>
+        <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Enter contact name ..." autocomplete="off" required>
+    </div>
+    <div class="form-group">
+        <label for="contactNumber">Enter the contact number : </label>
+        <input type="number" class="form-control" placeholder="Enter contact number ..." autocomplete="off" oninput="if (this.value.length > 10) { this.value = this.value.slice(0, 10); }" id="contactNumber" name="contactNumber" required>
+    </div>
+    <button class="btn btn-primary btn-block form-control"><i class="fa-solid fa-plus"> </i> Add Contact</button>
+</form>
+<%-include("partials/footer")%>

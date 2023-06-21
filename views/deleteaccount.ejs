@@ -1,0 +1,19 @@
+<%-include("partials/header")%>
+<form class="signin-form" action="/delete-account" method="post">
+    <h1 class="text-center">Delete Account Form</h1>
+    <div class="form-group">
+        <label for="delName">Enter user name :</label>
+        <input type="text" class="form-control" id="delName" name="delName" placeholder="Enter username ...." autocomplete="off"  required>
+    </div>
+    <div class="form-group">
+        <label for="signPassword">Enter the password :</label>
+        <input type="password" class="form-control" id="delPassword" name="delPassword" placeholder="Enter password ...." autocomplete="off" required>
+    </div>
+    <button class="btn btn-primary btn-block"><i class="fa-solid fa-trash"></i> Delete Account</button>
+    <div class="no-account">
+        
+        <a href="/">Go back</a>
+    </div>
+</form>
+<p class="text-center"><%=errormsg%></p>
+<%-include("partials/footer")%>

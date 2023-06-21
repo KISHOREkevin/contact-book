@@ -1,0 +1,37 @@
+.title-sec{
+    margin-top: 1%;
+}
+.delete-button{
+    width: 49%;
+    
+}
+.add-button{
+    width: 49%;
+}
+.nav-section{
+    text-align: center;
+}
+.contacts-section{
+    margin-top: 2%;
+    padding: 3%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.contacts-section p{
+    font-size: 20px;
+}
+.add-contact-form{
+    margin-top: 15%;
+    padding: 3%;
+}
+.no-account{
+    text-align: center;
+    margin-top: 2%;
+}
+.login-form{
+    margin-top: 10%;
+}
+.signin-form{
+    margin-top: 10%;
+}

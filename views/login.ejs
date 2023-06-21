@@ -1,0 +1,22 @@
+<%-include("partials/header")%>
+
+<form action="/login" class="login-form" method="post">
+    <h1 class="text-center">Login Form</h1>
+   <div class="form-group">
+    <label for="loginName">Enter user name : </label>
+    <input type="text" class="form-control" id="loginName" name="loginName" placeholder="Enter name ...." required>
+   </div>
+   <div class="form-group">
+    <label for="loginPassword">Enter the password : </label>
+    <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Enter password ....">
+   </div>
+    <button class="btn btn-primary btn-block"><i class="fa-solid fa-user"></i> Login</button>
+    <div class="no-account">
+        <p>Don't you have an account ?</p>
+        <a href="/signin">Create new account</a><br>
+        <a href="/delete-account">Delete an account</a>
+    </div>
+    
+    <p class="text-center"><%=errormsg%></p>
+</form>
+<%-include("partials/footer")%>

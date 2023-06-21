@@ -1,0 +1,38 @@
+<%-include("partials/header")%>
+<div class="nav-section">
+  <div class="row">
+    <div class="title-sec text-center col-lg-12">
+      <h2>Hey,<%=username.username%></h2>
+    </div>
+    <div class="contact-operations col-lg-12">
+      <br>
+      <a href="/add-contact"><button class="btn btn-primary add-button"><i class="fa-solid fa-plus"></i> Add Contact</button></a>
+      <a href="/logout"><button class="btn btn-primary add-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></a>
+      
+    </div>
+  </div>
+</div>
+<%foundcontacts.forEach((element) => {%>
+  <div class="contacts-section">
+  
+    <div class="row">
+      <p class="col-lg-6"><i class="fa-solid fa-user"></i> <%=element.contactname%></p>
+      <p class="col-lg-6"><i class="fa-solid fa-mobile"></i> <%=element.contactnumber%></p>
+    </div>
+    <div class="buttons">
+      
+      <form action="/delete-contact" method="post">
+        <a href="tel:+91<%=element.contactnumber%>"><button type="button" class="btn btn-success delete-button"><i class="fa-solid fa-phone"></i> Call</button></a>
+        <input type="hidden" name="deleteButton" value="<%=element._id%>">
+        <button type="submit" class="btn btn-danger delete-button"><i class="fa-solid fa-trash"></i> Delete</button>
+        
+      </form>
+    </div>
+  
+  </div>
+<%}); %>
+
+
+
+
+<%-include("partials/footer")%>
