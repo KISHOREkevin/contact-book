@@ -16,5 +16,8 @@
     "express": "^4.18.2",
     "mongoose": "^7.3.0"
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=14.20.1"
+  }
 }
